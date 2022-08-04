@@ -1,0 +1,107 @@
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-blue);
+    min-height: 100vh;
+}
+
+.card {
+    background-color: var(--dark-grayish-blue);
+    max-width: min(95%, 500px);
+    padding: 3rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.card-title h2 {
+    font-size: 0.8rem;
+    text-align: center;
+    letter-spacing: 3px;
+    color: var(--neon-green);
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+.card-text p {
+    font-size: 1.4rem;
+    text-align: center;
+    letter-spacing: 3px;
+    color: var(--light-cyan);
+    font-weight: 100;
+    quotes: "“" "”" "‘" "’";
+}
+
+.card-dice {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: var(--neon-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.card-dice img {
+    cursor: pointer;
+}
+
+.card-dice img {
+    max-width: 80%;
+}
+
+.card-footer img {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .card {
+        padding: 2.5rem;
+    }
+
+    .card-text p {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .card {
+        padding: 2rem;
+        padding-bottom: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        padding: 1.8rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .card-text p {
+        font-size: 1rem;
+    }
+}
